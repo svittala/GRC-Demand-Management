@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectSharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <ownerRules>
+        <fullName>Project_with_RM</fullName>
+        <sharedTo>
+            <role>Resource_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Project_Manager</role>
+        </sharedFrom>
+        <accessLevel>Read</accessLevel>
+        <name>Project with RM</name>
+    </ownerRules>
+</CustomObjectSharingRules>

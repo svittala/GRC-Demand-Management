@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Profile</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Profiles</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact No. --></label>
+        <name>Contact_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- CSC Employee ID --></help>
+        <label><!-- Employee ID --></label>
+        <name>Employee_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>Chennai</masterLabel>
+            <translation><!-- Chennai --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hydrabad</masterLabel>
+            <translation><!-- Hydrabad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Noida</masterLabel>
+            <translation><!-- Noida --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA - US</masterLabel>
+            <translation><!-- VA - US --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Primary Skill --></label>
+        <name>Primary_Skill__c</name>
+        <picklistValues>
+            <masterLabel>.Net</masterLabel>
+            <translation><!-- .Net --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Apex</masterLabel>
+            <translation><!-- Apex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Java</masterLabel>
+            <translation><!-- Java --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS SQL</masterLabel>
+            <translation><!-- MS SQL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oracle</masterLabel>
+            <translation><!-- Oracle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFDC ADM</masterLabel>
+            <translation><!-- SFDC ADM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFDC DEV</masterLabel>
+            <translation><!-- SFDC DEV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SalesLogix</masterLabel>
+            <translation><!-- SalesLogix --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VisualForce</masterLabel>
+            <translation><!-- VisualForce --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Profile Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Contact number should be valid phoine number --></errorMessage>
+        <name>Contact_No_Numeric_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

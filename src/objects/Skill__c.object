@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>To capture the skills of resources</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Certification_name__c</fullName>
+        <description>Certification required for the skill</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Certification required for the skill</inlineHelpText>
+        <label>Certification name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>SFDC ADM - 201</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFDC ADM - 301</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFDC DEV - 401</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFDC DEV - 501</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Desscription about skills</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Desscription about skills</inlineHelpText>
+        <label>Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Skill_Name__c</fullName>
+        <description>Name of the skill</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the skill</inlineHelpText>
+        <label>Skill Name</label>
+        <length>100</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Status of the skill</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of the skill</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <label>Skill</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Skill_Name__c</columns>
+        <columns>Description__c</columns>
+        <columns>Certification_name__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Testing_data</fullName>
+        <columns>NAME</columns>
+        <columns>Certification_name__c</columns>
+        <columns>Description__c</columns>
+        <columns>Skill_Name__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <operation>equals</operation>
+            <value>tgre1</value>
+        </filters>
+        <label>Testing data</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SN-{0000}</displayFormat>
+        <label>Skill No</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <namedFilters>
+        <fullName>nf_01Id00000019ka8EAA_00Nd0000005XVe8EAG</fullName>
+        <active>true</active>
+        <field>SkillProfie__c.Skill_No__c</field>
+        <filterItems>
+            <field>Skill__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>SkillProfie_Skill #</name>
+    </namedFilters>
+    <pluralLabel>Skills</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Skill_Name__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Skill_Name__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Skill_Name__c</searchFilterFields>
+        <searchResultsAdditionalFields>Skill_Name__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

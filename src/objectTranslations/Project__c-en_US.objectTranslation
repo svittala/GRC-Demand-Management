@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Project</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Projects</value>
+    </caseValues>
+    <fields>
+        <label><!-- Client Name --></label>
+        <name>Client_Name1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client ID --></label>
+        <name>Client_Name__c</name>
+        <relationshipLabel><!-- Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Duration (Hrs) --></label>
+        <name>Duration_Hrs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact --></label>
+        <name>Primary_Contact__c</name>
+        <relationshipLabel><!-- Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>1. Low</masterLabel>
+            <translation><!-- 1. Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Medium</masterLabel>
+            <translation><!-- 2. Medium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. high</masterLabel>
+            <translation><!-- 3. high --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>1. Speculative(-50%)</masterLabel>
+            <translation><!-- 1. Speculative(-50%) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Opportunity (50-75%)</masterLabel>
+            <translation><!-- 2. Opportunity (50-75%) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Likely (76%-90%)</masterLabel>
+            <translation><!-- 3. Likely (76%-90%) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Firm/Won (90%+)</masterLabel>
+            <translation><!-- 4. Firm/Won (90%+) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. In Process</masterLabel>
+            <translation><!-- 5. In Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Cancelled</masterLabel>
+            <translation><!-- 6. Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Completed</masterLabel>
+            <translation><!-- 7. Completed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Win-Probability --></label>
+        <name>Win_Probability__c</name>
+    </fields>
+    <layouts>
+        <layout>Project Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

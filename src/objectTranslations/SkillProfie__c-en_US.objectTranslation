@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SkillProfie</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SkillProfies</value>
+    </caseValues>
+    <fields>
+        <label><!-- Profile Name --></label>
+        <name>Profile_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profile # --></label>
+        <name>Profile_No__c</name>
+        <relationshipLabel><!-- Skills --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Skill Name --></label>
+        <name>Skill_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Skill # --></label>
+        <name>Skill_No__c</name>
+        <relationshipLabel><!-- Profiles --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>SkillProfie Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

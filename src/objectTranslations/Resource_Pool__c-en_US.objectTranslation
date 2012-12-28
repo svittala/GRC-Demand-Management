@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Resource Pool</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Resource Pool</value>
+    </caseValues>
+    <fields>
+        <help><!-- Current Position / Account --></help>
+        <label><!-- Current Position --></label>
+        <name>Current_Position__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Resource available date --></help>
+        <label><!-- Next Available Date --></label>
+        <name>Next_Available_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field will be referred to the position ID --></help>
+        <label><!-- Position Allotment --></label>
+        <name>Position_Allotment__c</name>
+        <relationshipLabel><!-- Resource Pool --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Position Name --></label>
+        <name>Position_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profile Email --></label>
+        <name>Profile_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profile First Name --></label>
+        <name>Profile_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profile ID --></label>
+        <name>Profile_ID__c</name>
+        <relationshipLabel><!-- Resource Pool --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Profile Last Name --></label>
+        <name>Profile_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profile Name --></label>
+        <name>Profile_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Start Date --></label>
+        <name>Project_Start_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Resource Pool Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- There is already a resource allocated to this position --></errorMessage>
+        <name>Validation_For_Current_Position</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can not add more resource pool items to this position. --></errorMessage>
+        <name>Validation_To_Add_Resource_Pool</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Assignment_Release --></label>
+        <name>Assignment_Release</name>
+    </webLinks>
+</CustomObjectTranslation>

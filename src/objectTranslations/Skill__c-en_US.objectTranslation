@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Skill</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Skills</value>
+    </caseValues>
+    <fields>
+        <help><!-- Certification required for the skill --></help>
+        <label><!-- Certification name --></label>
+        <name>Certification_name__c</name>
+        <picklistValues>
+            <masterLabel>SFDC ADM - 201</masterLabel>
+            <translation><!-- SFDC ADM - 201 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFDC ADM - 301</masterLabel>
+            <translation><!-- SFDC ADM - 301 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFDC DEV - 401</masterLabel>
+            <translation><!-- SFDC DEV - 401 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFDC DEV - 501</masterLabel>
+            <translation><!-- SFDC DEV - 501 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Desscription about skills --></help>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Name of the skill --></help>
+        <label><!-- Skill Name --></label>
+        <name>Skill_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Status of the skill --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Skill Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Information about SFDC projects</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Client_Name1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Client_Name__r.Client_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Client Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Client ID</label>
+        <referenceTo>Client__c</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Duration_Hrs__c</fullName>
+        <externalId>false</externalId>
+        <label>Duration (Hrs)</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Primary contact for project</description>
+        <externalId>false</externalId>
+        <label>Primary Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1. Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. high</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <description>Project  start date</description>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1. Speculative(-50%)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Opportunity (50-75%)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Likely (76%-90%)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4. Firm/Won (90%+)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5. In Process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6. Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7. Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Win_Probability__c</fullName>
+        <externalId>false</externalId>
+        <label>Win-Probability</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <label>Project</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Client_Name__c</columns>
+        <columns>Duration_Hrs__c</columns>
+        <columns>Start_Date__c</columns>
+        <columns>Status__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Win_Probability__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Projects_By_PM</fullName>
+        <columns>NAME</columns>
+        <columns>Client_Name1__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Projects By PM</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PN-{0000}</displayFormat>
+        <label>Project No</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Projects</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Client_Name1__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Start_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Client_Name1__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Start_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Client_Name__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchResultsAdditionalFields>Client_Name1__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Start_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

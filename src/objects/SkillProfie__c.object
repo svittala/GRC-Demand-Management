@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>To link Skill and profile object</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Profile_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Profile_No__r.Last_Name__c  &amp; &quot;, &quot; &amp;  Profile_No__r.First_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Profile Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Profile_No__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Profile #</label>
+        <referenceTo>Profile__c</referenceTo>
+        <relationshipLabel>Skills</relationshipLabel>
+        <relationshipName>SkillProfies</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Skill_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Skill_No__r.Skill_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Skill Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Skill_No__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Skill #</label>
+        <referenceTo>Skill__c</referenceTo>
+        <relationshipLabel>Profiles</relationshipLabel>
+        <relationshipName>SkillProfies</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>SkillProfie</label>
+    <nameField>
+        <displayFormat>SP-{0000}</displayFormat>
+        <label>SkillProfie No</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>SkillProfies</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Profile_No__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Skill_No__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Profile_No__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Skill_No__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Profile_No__c</searchFilterFields>
+        <searchFilterFields>Skill_No__c</searchFilterFields>
+        <searchResultsAdditionalFields>Profile_No__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Skill_No__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

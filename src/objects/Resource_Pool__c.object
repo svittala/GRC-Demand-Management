@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Resource availability</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Current_Position__c</fullName>
+        <description>Current Position / Account the resource is engaged with.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current Position / Account</inlineHelpText>
+        <label>Current Position</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Next_Available_Date__c</fullName>
+        <description>Resource available date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Resource available date</inlineHelpText>
+        <label>Next Available Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Position_Allotment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This field will be referred to the position ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will be referred to the position ID</inlineHelpText>
+        <label>Position Allotment</label>
+        <referenceTo>Position__c</referenceTo>
+        <relationshipLabel>Resource Pool</relationshipLabel>
+        <relationshipName>Resource_Pool</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Position_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Position_Allotment__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Position Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Profile_Email__c</fullName>
+        <description>This field gets Inserted/updated by workflow rule</description>
+        <externalId>false</externalId>
+        <label>Profile Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Profile_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Profile_ID__r.First_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Profile First Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Profile_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Profile ID</label>
+        <referenceTo>Profile__c</referenceTo>
+        <relationshipLabel>Resource Pool</relationshipLabel>
+        <relationshipName>Resource_Pool</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Profile_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Profile_ID__r.Last_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Profile Last Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Profile_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Profile_ID__r.Id,   Profile_ID__r.First_Name__c + &quot; &quot; +  Profile_ID__r.Last_Name__c , &apos;_self&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Profile Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Position_Allotment__r.Project__r.Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Project Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <label>Resource Pool</label>
+    <nameField>
+        <displayFormat>RP-{0000}</displayFormat>
+        <label>Resource Pool No</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Resource Pool</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Current_Position__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Next_Available_Date__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Current_Position__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Next_Available_Date__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Current_Position__c</searchFilterFields>
+        <searchFilterFields>Next_Available_Date__c</searchFilterFields>
+        <searchResultsAdditionalFields>Current_Position__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Next_Available_Date__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Validation_For_Current_Position</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISPICKVAL(Position_Allotment__r.Status__c, &apos;E-Filled&apos;),
+ISPICKVAL(Current_Position__c ,&apos;Yes&apos;), ISNEW() )</errorConditionFormula>
+        <errorMessage>There is already a resource allocated to this position</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validation_To_Add_Resource_Pool</fullName>
+        <active>false</active>
+        <description>RM cannot add more resource pool entries for a status “E-Filled ,
+G-Completed ,H- On Hold  or F-Cancelled &quot;.</description>
+        <errorConditionFormula>AND( ISNEW(),
+OR(
+ISPICKVAL( Position_Allotment__r.Status__c, &quot;E-Filled&quot;),
+ISPICKVAL( Position_Allotment__r.Status__c, &quot;G-Completed&quot;),
+ISPICKVAL( Position_Allotment__r.Status__c, &quot;H- On Hold&quot;),
+ISPICKVAL( Position_Allotment__r.Status__c, &quot;F-Cancelled&quot;)
+) )</errorConditionFormula>
+        <errorMessage>You can not add more resource pool items to this position.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Assignment_Release</fullName>
+        <availability>online</availability>
+        <description>Assignment/Release a resource</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Assignment/Release</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/19.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/16.0/apex.js&quot;)}
+var url = parent.location.href;
+
+var records = {!GETRECORDIDS($ObjectType.Resource_Pool__c)};
+var updateRecords = [];
+
+if (records == null || records[0] == null || records.length &gt; 1 ) 
+{
+	alert(&quot;Please select a record.&quot;); 
+}
+
+else
+{   
+          var query = &quot;Select Position_Allotment__c , Current_Position__c  from Resource_Pool__c Where ID = &apos;&quot; + records[0] + &quot;&apos;&quot; 
+          var resultQuery = sforce.connection.query(query);
+          var recordsQuery = resultQuery.getArray(&quot;records&quot;);
+
+          if(recordsQuery != null &amp;&amp; recordsQuery.length &gt; 0)
+           {  
+               if (recordsQuery[0].Position_Allotment__c  != null )
+               {
+                 var queryPosition =  &quot;Select Status__c from Position__C  Where ID = &apos;&quot;+ recordsQuery[0].Position_Allotment__c +&quot;&apos;&quot;
+                 var resultQueryPosition = sforce.connection.query(queryPosition);
+                 var recordsQueryPosition = resultQueryPosition.getArray(&quot;records&quot;);
+                  if (recordsQueryPosition != null &amp;&amp; recordsQueryPosition.length &gt; 0 )
+                  {
+                     // if (recordsQueryPosition[0].Status__c  == &quot;E-Filled&quot; )
+                     //  {
+                     //    alert (&quot;You can not made changes to this position&quot;)
+                       //  return false;
+                    //   }
+                    //  else
+                     //  {
+                          var update_RP = new sforce.SObject(&quot;Resource_Pool__c&quot;);           
+                          update_RP.Id = records[0];
+                          update_RP.Current_Position__c =  &quot;Yes&quot;;
+                          if(recordsQuery[0].Current_Position__c == &quot;Yes&quot;) 
+		                  update_RP.Current_Position__c =  &quot;No&quot;;		                   
+	                      updateRecords.push(update_RP); 	
+	                      result = sforce.connection.update(updateRecords); 
+                               if (result[0].getBoolean(&quot;success&quot;) &amp;&amp; update_RP.Current_Position__c ==  &quot;No&quot; )
+                                alert (&quot;Resource Deallocated from position Successfully&quot;)
+                              else  if (result[0].getBoolean(&quot;success&quot;) &amp;&amp; update_RP.Current_Position__c ==  &quot;Yes&quot; )
+                                alert (&quot;Resource Allocated to the position Successfully&quot;)
+                               else
+                                   alert (&quot;You can not made changes to this position&quot;)
+	                      parent.location.href = url; 
+                      // } 
+                  }   
+               }		
+          }
+}</url>
+    </webLinks>
+</CustomObject>

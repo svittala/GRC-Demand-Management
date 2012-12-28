@@ -1,0 +1,8 @@
+Dear  {!Resource_Pool__c.Profile_First_Name__c}  {!Resource_Pool__c.Profile_Last_Name__c},
+
+You have been assigned for a position : {!Resource_Pool__c.Position_Name__c}. 
+
+Your Project Start Date is :  {!Resource_Pool__c.Project_Start_Date__c}
+
+Regards, 
+GRC

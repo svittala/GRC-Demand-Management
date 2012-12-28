@@ -1,0 +1,8 @@
+Dear {!Receiving_User.LastName},
+
+Project manager has added a new skill 
+{!Skill__c.Skill_Name__c}. 
+Please approve the skill and make sure we can identify future candidates to fill this skill
+
+Regards,
+GRC

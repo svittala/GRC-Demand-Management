@@ -1,0 +1,29 @@
+<apex:page standardController="Position__c" recordSetVar="apps">
+  <apex:sectionHeader title="Insert New Positions for the Project" />
+  <apex:form >
+      <Apex:pageBlock mode="Edit">
+          <apex:pageMessages />
+          <apex:pageBlockButtons >
+              <Apex:commandButton value="Save" action="{!Save}"/>
+              <apex:commandButton value="Cancel" action="{!cancel}"/>
+          </apex:pageBlockButtons>
+          <Apex:pageBlockSection title="Insert New records" collapsible="false" columns="1">
+                    <apex:inputField value="{!Position__c.Project__c}" />
+              <apex:pageBlockTable value="{!Position__c}" var="abc" rowClasses="3">
+              <!--
+              <apex:facet name="footer">
+                    <apex:commandLink value="Add Row" action="{!addRow}" rerender="table,error"/>
+                </apex:facet>
+              -->
+                  <apex:column HeaderValue="Project No"><apex:outputField value="{!abc.Project__c}" /></Apex:column>
+                  <apex:column headerValue="Position Name"><apex:inputField value="{!Position__c.Name}" /></Apex:column>
+                  <Apex:column headerValue="Skills" ><apex:inputField value="{!Position__c.Skill__c}" /></Apex:column>
+                  <Apex:column headerValue="Duration"> <Apex:inputField value="{!Position__c.Duration__c}"/> </Apex:column>
+                  <Apex:column headerValue="StartDate"> <Apex:inputField value="{!Position__c.Start_Date__c}"/> </Apex:column>
+                  <Apex:column headerValue="Status"> <Apex:inputField value="{!Position__c.Status__c}"/> </Apex:column>
+                  <Apex:column headerValue="Location" ><apex:inputField value="{!Position__c.Location__c}" /></Apex:column>
+              </apex:pageBlockTable>
+          </Apex:pageBlockSection> 
+      </Apex:pageBlock>
+    </apex:form>
+</apex:page>

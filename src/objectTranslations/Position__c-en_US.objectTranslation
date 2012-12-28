@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Position</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Positions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Allotted Profile --></label>
+        <name>AllottedProfile__c</name>
+        <relationshipLabel><!-- Positions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Duration (Hrs) --></label>
+        <name>Duration__c</name>
+    </fields>
+    <fields>
+        <label><!-- End date --></label>
+        <name>End_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>Offshore</masterLabel>
+            <translation><!-- Offshore --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Onshore</masterLabel>
+            <translation><!-- Onshore --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+        <relationshipLabel><!-- Positions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Resource Name --></label>
+        <name>ResourceName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resource Pool --></label>
+        <name>ResourcePool__c</name>
+        <relationshipLabel><!-- Positions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Resource Email --></label>
+        <name>Resource_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Skill Name --></label>
+        <name>Skill_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Skill --></label>
+        <name>Skill__c</name>
+        <relationshipLabel><!-- Positions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>A-Build</masterLabel>
+            <translation><!-- A-Build --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B-Analyze</masterLabel>
+            <translation><!-- B-Analyze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C-Int. Review</masterLabel>
+            <translation><!-- C-Int. Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>D-Source</masterLabel>
+            <translation><!-- D-Source --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>E-Filled</masterLabel>
+            <translation><!-- E-Filled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F-Cancelled</masterLabel>
+            <translation><!-- F-Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>G-Completed</masterLabel>
+            <translation><!-- G-Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>H- On Hold</masterLabel>
+            <translation><!-- H- On Hold --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Position Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Position Layout - PM</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Ins_Positions --></label>
+        <name>Ins_Positions</name>
+    </webLinks>
+</CustomObjectTranslation>
